@@ -1,0 +1,31 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "description": "websocket tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selfup/websockets.git"
+  },
+  "keywords": [
+    "websockets",
+    "socketio",
+    "realtime",
+    "tutorial"
+  ],
+  "author": "Regis Boudinot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/selfup/websockets/issues"
+  },
+  "homepage": "https://github.com/selfup/websockets#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "lodash": "^4.0.0",
+    "socket.io": "^1.4.4"
+  }
+}
