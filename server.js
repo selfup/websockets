@@ -48,6 +48,7 @@ io.on('connection', (socket) => {
 const votes = {}
 
 const countVotes = (votes) => {
+
 const voteCount = {
     A: 0,
     B: 0,
