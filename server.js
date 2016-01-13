@@ -24,6 +24,8 @@ io.on('connection', (socket) => {
 
   io.sockets.emit('usersConnected', io.engine.clientsCount)
 
+  socket.emit('statusMessage', 'You have connected.');
+
   socket.on('disconnect', () => {
     console.log('A user has disconnected.', io.engine.clientsCount)
     io.sockets.emit('usersConnected', io.engine.clientsCount)
