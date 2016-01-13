@@ -16,7 +16,7 @@ socket.on('statusMessage', (message) => {
 })
 
 socket.on('userVote', (message) => {
-  userVote.innerText = `Your vote is: ${message}`;
+  userVote.innerText = `Your vote is: ${message} and it has been logged! Thanks for VOTING!`;
 })
 
 socket.on('voteCount', (votes) => {
