@@ -37,11 +37,8 @@ io.on('connection', (socket) => {
     io.sockets.emit('usersConnected', io.engine.clientsCount)
   })
 
-  socket.on('message', (channel, message) => {
-    if (channel === 'voteCast') {
-      votes[socket.id] = message
-      console.log(votes)
-    }
+  socket.on('voteCount', (votes) => {
+    console.log(votes)
   })
 })
 
