@@ -44,14 +44,15 @@ io.on('connection', (socket) => {
 
 const votes = {}
 
-const voteCount = {
-    A: 0,
-    B: 0,
-    C: 0,
-    D: 0
-}
+
 
 var countVotes = (votes) => {
+  const voteCount = {
+      A: 0,
+      B: 0,
+      C: 0,
+      D: 0
+  }
   for (vote in votes) {
     voteCount[votes[vote]]++
   }
