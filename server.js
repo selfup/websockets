@@ -27,18 +27,18 @@ io.on('connection', (socket) => {
   socket.emit('statusMessage', 'You have connected.')
 
   socket.on('message', (channel, message) => {
-    console.log(channel, message)
-  })
+    if (channel === 'voteCast') {
+      votes[socket.id] = message;
+      socket.emit('userVote', message);
+      socket.emit('voteCount', countVotes(votes));
+    }
+  });
 
   socket.on('disconnect', () => {
     console.log('A user has disconnected.', io.engine.clientsCount)
     delete votes[socket.id]
     console.log(votes)
     io.sockets.emit('usersConnected', io.engine.clientsCount)
-  })
-
-  socket.on('voteCount', (votes) => {
-    console.log(votes)
   })
 })
 
