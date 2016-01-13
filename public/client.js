@@ -20,7 +20,10 @@ socket.on('userVote', (message) => {
 })
 
 socket.on('voteCount', (votes) => {
-  currentVotes.innerText = `A: ${votes["A"]}, B: ${votes["B"]}, C: ${votes["C"]}, D: ${votes["D"]}`
+  currentVotes.innerText = `Vote A: ${votes["A"]}
+   Vote B: ${votes["B"]}
+   Vote C: ${votes["C"]}
+   Vote D: ${votes["D"]}`
 })
 
 for (let i = 0; i < buttons.length; i++) {
